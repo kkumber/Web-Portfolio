@@ -1,7 +1,7 @@
 const BlurEffectContainer = ({title, content, customClassName}) => {
     return ( 
-        <div className="relative bg-ContainerLinearGray shadow-xl bg-opacity-70 backdrop-blur-xl rounded-sm p-4">
-            <p className={customClassName}><b>{title}</b></p>
+        <div className={`${customClassName} relative bg-backgroundLinearLightGray shadow-xl backdrop-blur-xl rounded-sm p-4 w-full h-full`}>
+            <p><b>{title}</b></p>
             <p>{content}</p>
         </div>
      );
