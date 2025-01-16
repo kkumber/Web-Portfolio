@@ -15,6 +15,9 @@ export default {
         ContainerLinearGray: '#7E7E7E',
         TextLinearOrange: '#F29831',
         TextLinearPurple: '#97257E'
+      },
+      fontFamily: {
+        monaSans: 'Mona Sans, serif',
       }
     },
   },
