@@ -4,7 +4,7 @@ const ContactContainer = ({icon, iconSize, text, subText, textDesign, link}) => 
     return (
         <a href={link} target='_blank'>
         <div className="bg-gradient-to-bl from-ContainerLinearDark from-30% via-backgroundLinearLightGray shadow-md
-        backdrop-blur-2xl border-borderColor p-4 text-white rounded-lg w-full h-full flex flex-col flex-wrap justify-center items-center text-center">
+        backdrop-blur-2xl border-borderColor p-4 text-white rounded-lg w-full h-full flex flex-col flex-wrap justify-center items-center text-center hover:scale-105 transition-all duration-300">
             <div className="">
                 <FontAwesomeIcon icon={icon} className={iconSize}/>
             </div>
