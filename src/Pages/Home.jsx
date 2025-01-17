@@ -6,7 +6,7 @@ import TechnologyContainer from "../Components/TechnologyContainer";
 const Home = () => {
     return (
     // Main Grid
-    <div className="grid md:grid-cols-3 md:grid-rows-5 gap-2 text-white">
+    <div className="grid mt-20 md:grid-cols-3 md:grid-rows-5 gap-2 text-white">
     {/* <div className="grid grid-cols-3 grid-rows-5 gap-2 text-white">
             <div className="col-start-1 col-end-3 row-start-1 row-end-2 animate-fadeRight "> <BlurEffectContainer title={'About me'} customTitleClassName={'text-2xl mb-2'} content={'Hello, i am an undergrad student in Rizal Technological University with a diverse set of skills in web development. I specialize in React and Django'} /> </div>
             <div className="col-start-1 col-end-2 row-start-2 row-end-4 animate-fadeUp "> <GlassEffectContainer title={'Education'} content={'Bachelor of Science in Information Technology - Undergraduate'} customClassName={'text-xl mb-4'} /> </div>

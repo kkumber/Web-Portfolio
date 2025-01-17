@@ -11,7 +11,7 @@ const Projects = () => {
     ]
 
     return ( 
-    <div className="grid md:grid-cols-2 gap-8">
+    <div className="grid mt-20 md:grid-cols-2 gap-8">
         {projects.map((data, index) => 
             <ProjectContainer data={data} key={index}/>
         )}

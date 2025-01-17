@@ -15,7 +15,7 @@ const Contact = () => {
 
     return (
         
-<div className="grid grid-cols-2 grid-rows-4 gap-4 text-white">
+<div className="grid mt-20 grid-cols-2 grid-rows-4 gap-4 text-white">
     <div className='animate-fadeLeft'><ContactContainer icon={contacts[0].icon} iconSize={contacts[0].iconSize} text={contacts[0].text}/></div>
     <div className="col-start-1 row-start-2 animate-fadeUp"><ContactContainer icon={contacts[1].icon} iconSize={contacts[1].iconSize} text={contacts[1].text} link={contacts[1].link}/></div>
     <div className="col-start-1 row-start-3 animate-fadeDown"><ContactContainer icon={contacts[2].icon} iconSize={contacts[2].iconSize} text={contacts[2].text} link={contacts[2].link}/></div>
