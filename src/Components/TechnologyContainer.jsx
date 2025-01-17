@@ -19,10 +19,10 @@ const TechnologyContainer = () => {
     return ( 
         <div className="bg-gradient-to-bl from-ContainerLinearDark from-30% via-backgroundLinearLightGray shadow-md
         backdrop-blur-2xl border-borderColor p-4 text-white rounded-sm w-full h-full">
-            <b><span className="text-xl">Technologies I worked with: </span></b>
-            <div className="grid grid-cols-5 gap-y-4 mt-4">
+            <b><span className="text-xl">Skills & Tools: </span></b>
+            <div className="flex flex-wrap gap-4 mt-4">
                 {images.map((image, index) => 
-                    <img key={index} src={image.src} alt={image.alt} className="w-12 h- object-contain"/>
+                    <img key={index} src={image.src} alt={image.alt} className="w-11 object-contain"/>
                 )}
             </div>
 
