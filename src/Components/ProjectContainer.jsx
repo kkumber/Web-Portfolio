@@ -24,12 +24,12 @@ const ProjectContainer = ({data}) => {
                 {/* Technologies */}
                 <div className="mb-4">
                     <b><span>Technologies used:</span></b>
-                    <div className="mt-4 flex items-center gap-1">
+                    <div className="mt-4 flex items-center gap-1 flex-wrap">
                         {data.tech.map((tool, index) => <TechnologyWrapper tool={tool} index={index} />)}
                     </div>
                 </div>
                 {/* Links */}
-                <div className="flex items-center gap-x-4 mt-8">
+                <div className="flex items-center gap-4 mt-8">
                     <button className="bg-white text-black px-4 py-2 rounded-md"><a href={data.github} target="_blank"><b>Github</b></a></button>
                     <button className="border-white border-2 px-4 py-2 rounded-md"><a href={data.demo}>Live Demo</a></button>
                 </div>
