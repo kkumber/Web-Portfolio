@@ -9,7 +9,7 @@ const ProjectContainer = ({data}) => {
     }, [data])
 
     return ( 
-        <div className={`relative bg-backgroundLinearLightGray shadow-xl backdrop-blur-xl rounded-xl w-full h-full text-white`}>
+        <div className={`relative bg-backgroundLinearLightGray shadow-xl backdrop-blur-xl rounded-xl w-full h-full text-white animate-fadeUp`}>
             {/* Image */}
             <div className="">
                 <img src={data.image} alt="Project Sample" className="w-full rounded-t-md"/>
