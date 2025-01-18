@@ -12,7 +12,7 @@ const ProjectContainer = ({data}) => {
     }, [data])
 
     return ( 
-        <div className={`relative bg-backgroundLinearLightGray shadow-xl backdrop-blur-xl rounded-xl w-full h-full text-white animate-fadeUp transition-all duration-300`}>
+        <div className={`relative max-h-min bg-backgroundLinearLightGray shadow-xl backdrop-blur-xl rounded-xl w-full h-full text-white animate-fadeUp transition-all duration-300`}>
             {/* Image */}
             <div className="">
                 <img src={data.image} alt="Project Sample" className="w-full rounded-t-md"/>
@@ -43,8 +43,10 @@ const ProjectContainer = ({data}) => {
                             </div>
                         </a>
                     </button>
-                    <button className="border-white border-2 px-4 py-2 rounded-md hover:border-transparent">
-                        <a href={data.demo} className="flex justify-between items-center gap-x-1">
+                    {
+                        data.demo && 
+                        <button className="border-white border-2 px-4 py-2 rounded-md hover:border-transparent">
+                        <a href={data.demo} target="_blank" className="flex justify-between items-center gap-x-1">
                             <div className="">
                                 <FontAwesomeIcon icon={faGlobe}/>
                             </div>
@@ -53,6 +55,8 @@ const ProjectContainer = ({data}) => {
                             </div>
                         </a>
                     </button>
+                    }
+
                 </div>
             </div>
             

@@ -27,7 +27,7 @@ const Home = () => {
         <div className="md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3 animate-fadeLeft md:order-6"><img src="/images/pic2.jpg" alt="Picture" className="h-full object-cover" /></div>
         <div className="md:col-start-3 md:col-end-4 md:row-start-3 md:row-end-4 animate-fadeUp md:order-7"><BlurEffectContainer title={'"Keep Moving Forward"'} customClassName='text-center flex justify-center items-center text-xl' /> </div>
         <div className="md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-4 animate-fadeUp md:order-2"> <GlassEffectContainer title={'Education'} subTitle={'Rizal Technological University'} content={'Bachelor of Science in Information Technology - Undergraduate'} customClassName={'text-xl mb-4'} /> </div>
-        <div className="md:col-start-1 md:col-end-2 md:row-start-4 md:row-end-6 animate-fadeDown md:order-3"><GlassEffectContainer title={'Achievements'} content={'2023 Communications Synergy Hackaton - 3rd Place'} customClassName={'text-2xl mb-4'} /> </div>
+        <div className="md:col-start-1 md:col-end-2 md:row-start-4 md:row-end-6 animate-fadeDown md:order-3"><GlassEffectContainer title={'Achievements'}subTitle={'Converge ICT Solutions Inc.`s Software Solutions of Synergy: Electrical and Electronics Engineering Summit -'} content={'3rd Place'} customClassName={'text-2xl mb-4'} /> </div>
 
     </div> 
     );

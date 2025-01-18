@@ -8,7 +8,7 @@ import Navbar from './Components/Navbar'
 function App() {
 
   return (
-    <div className="mx-2 md:mx-4 lg:mx-20 xl:mx-60">
+    <div className="mx-2 md:mx-4 xl:mx-40">
       <BrowserRouter>
       <Navbar />
         <Routes>

@@ -15,13 +15,13 @@ const ProfileContainer = () => {
                 <b><span className='text-3xl bg-gradient-to-r from-TextLinearOrange to-TextLinearPurple bg bg-clip-text text-transparent'>Angel Reyes</span></b>
             </div>
             <div className="flex justify-between items-center">
-                <FontAwesomeIcon icon={faGithub} size='2xl' />
-                <FontAwesomeIcon icon={faFacebook} size='2xl' />
-                <FontAwesomeIcon icon={faXTwitter} size='2xl' />
-                <FontAwesomeIcon icon={faInstagram} size='2xl' />
+                <a href="https://github.com/kkumber" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} size='2xl' /></a>
+                <a href="https://web.facebook.com/angel.reyes.111084" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} size='2xl' /></a>
+                <a href="https://x.com/Tweightfor28" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faXTwitter} size='2xl' /></a>
+                <a href="https://www.instagram.com/kukumvber/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} size='2xl' /></a>       
             </div>
         </div>
      );
 }
  
-export default ProfileContainer;
+export default ProfileContainer; 
