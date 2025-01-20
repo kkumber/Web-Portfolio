@@ -1,5 +1,6 @@
 
 const TechnologyContainer = () => {
+    // Update from time to time
     const images = [
         {src: '/images/html-5-svgrepo-com.svg', alt: 'HTML'},
         {src: '/images/css-3-svgrepo-com.svg', alt: 'CSS'},
