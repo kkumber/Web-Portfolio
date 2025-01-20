@@ -5,11 +5,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectContainer = ({data}) => {
-    useEffect(() => {
-        if(data) {
-            console.log(data);
-        }
-    }, [data])
 
     return ( 
         <div className={`relative max-h-min bg-backgroundLinearLightGray shadow-xl backdrop-blur-xl rounded-xl w-full h-full text-white animate-fadeUp transition-all duration-300`}>
