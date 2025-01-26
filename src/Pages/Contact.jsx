@@ -9,7 +9,7 @@ const Contact = () => {
         {icon: faXTwitter, text: 'X', iconSize: 'text-4xl', link: 'https://x.com/Tweightfor28'},
         {icon: faInstagram, text: 'Instagram', iconSize: 'text-4xl', link: 'https://www.instagram.com/kukumvber/'},
         {icon: faLinkedin, text: 'LinkedIn Profile', iconSize: 'text-7xl', link: 'https://www.linkedin.com/in/angel-reyes-93a7a7346/'},
-        {icon: faGithub, text: 'Github Profile', iconSize: 'text-7xl', link: 'https://github.com/kkumber'},
+        {icon: faGithub, text: 'Github Profile', iconSize: 'text-7xl', link: 'https://github.com/kkumber'}
     ]
 
 

@@ -14,6 +14,7 @@ const TechnologyContainer = () => {
         {src: '/images/PostgresSQL.svg', alt: 'PostgresSQL'},
         {src: '/images/Git.svg', alt: 'Git'},
         {src: '/images/TypeScript.svg', alt: 'TypeScript'},
+        {src: '/images/PHP.svg', alt: 'PHP'},
     ];
 
 
