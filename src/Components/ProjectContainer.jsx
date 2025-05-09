@@ -23,7 +23,7 @@ const ProjectContainer = ({data}) => {
                 <div className="mb-4">
                     <b><span>Technologies used:</span></b>
                     <div className="mt-4 flex items-center gap-1 flex-wrap">
-                        {data.tech.map((tool, index) => <TechnologyWrapper tool={tool} index={index} />)}
+                        {data.tech.map((tool, index) => <TechnologyWrapper tool={tool} index={index} key={index}/>)}
                     </div>
                 </div>
                 {/* Links */}

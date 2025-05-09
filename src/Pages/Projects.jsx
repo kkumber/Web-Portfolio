@@ -13,7 +13,7 @@ const Projects = () => {
     return ( 
     <div className="grid my-20 md:grid-cols-2 gap-8">
         {projects.map((data, index) => 
-            <ProjectContainer data={data} key={index}/>
+            <ProjectContainer data={data} key={index} />
         )}
     </div>
      );
