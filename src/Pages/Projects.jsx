@@ -3,6 +3,25 @@ import ProjectContainer from "../Components/ProjectContainer";
 const Projects = () => {
   const projects = [
     {
+      image: "/images/projects/relight.png",
+      title: "Relight",
+      description:
+        "Relight is a light novel companion—browse and search thrilling stories, build a personal library with ratings and threaded comments, and effortlessly upload light novel PDFs for automatic metadata extraction. Dive into every chapter with PDF.js–powered reading and per-user, per-page bookmarks to pick up exactly where you left off. Backed by secure login, registration, and email-based password resets, Relight delivers seamless design and rock-solid security—setting the standard for my future projects",
+      tech: [
+        "React",
+        "Typescript",
+        "TailwindCSS",
+        "Django",
+        "PostgreSQL",
+        "Django Rest Framework",
+        "JWT",
+        "PDFjs",
+        "Cloudinary",
+      ],
+      github: "https://github.com/kkumber/RELIGHT.git",
+      demo: "https://relight-plum.vercel.app",
+    },
+    {
       image: "/images/projects/diyeats.png",
       title: "DIYeats",
       description:
@@ -26,25 +45,6 @@ const Projects = () => {
       tech: ["Svelte", "Typescript", "SASS", "Firebase"],
       github: "https://github.com/jjjayed/AidBot-sveltekit.git",
       demo: "",
-    },
-    {
-      image: "/images/projects/relight.png",
-      title: "Relight",
-      description:
-        "Relight is a light novel companion—browse and search thrilling stories, build a personal library with ratings and threaded comments, and effortlessly upload light novel PDFs for automatic metadata extraction. Dive into every chapter with PDF.js–powered reading and per-user, per-page bookmarks to pick up exactly where you left off. Backed by secure login, registration, and email-based password resets, Relight delivers seamless design and rock-solid security—setting the standard for my future projects",
-      tech: [
-        "React",
-        "Typescript",
-        "TailwindCSS",
-        "Django",
-        "PostgreSQL",
-        "Django Rest Framework",
-        "JWT",
-        "PDFjs",
-        "Cloudinary",
-      ],
-      github: "https://github.com/kkumber/RELIGHT.git",
-      demo: "https://relight-plum.vercel.app",
     },
     // {image: '', title: '', description: '', tech: [], github: '', demo: 'demo'},
     // {image: '', title: '', description: '', tech: [], github: '', demo: 'demo'},
