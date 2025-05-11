@@ -7,7 +7,7 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 const ProjectContainer = ({data}) => {
 
     return ( 
-        <div className={`relative max-h-min bg-backgroundLinearLightGray shadow-xl backdrop-blur-xl rounded-xl w-full h-full text-white animate-fadeUp transition-all duration-300`}>
+        <div className={`relative bg-backgroundLinearLightGray shadow-xl backdrop-blur-xl rounded-xl w-full h-full text-white animate-fadeUp transition-all duration-300`}>
             {/* Image */}
             <div className="">
                 <img src={data.image} alt="Project Sample" className="w-full rounded-t-md"/>
@@ -21,9 +21,9 @@ const ProjectContainer = ({data}) => {
                 </div>
                 {/* Technologies */}
                 <div className="mb-4">
-                    <b><span>Tools used:</span></b>
+                    <b><span>Technologies used:</span></b>
                     <div className="mt-4 flex items-center gap-1 flex-wrap">
-                        {data.tech.map((tool, index) => <TechnologyWrapper tool={tool} index={index} />)}
+                        {data.tech.map((tool, index) => <TechnologyWrapper tool={tool} index={index} key={index}/>)}
                     </div>
                 </div>
                 {/* Links */}
