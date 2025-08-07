@@ -9,7 +9,7 @@ const ProfileContainer = () => {
                 <p className='bg-gradient-to-r from-TextLinearOrange to-TextLinearPurple bg bg-clip-text text-transparent'>Undergraduate Student</p>
             </div>
             <div className="w-32 m-auto mb-4 md:m-auto">
-                <img src="/images/formal_picture.jpg" alt="Profile Picture" className="rounded-full" />
+                <img src="/images/formal_picture.webp" alt="Profile Picture" className="rounded-full" />
             </div>
             <div className="mb-4 md:m-auto">
                 <b><span className='text-3xl bg-gradient-to-r from-TextLinearOrange to-TextLinearPurple bg bg-clip-text text-transparent'>Angel Reyes</span></b>
