@@ -16,6 +16,7 @@ const TechnologyContainer = () => {
         {src: '/images/Git.svg', title: 'Git'},
         {src: '/images/TypeScript.svg', title: 'TypeScript'},
         {src: '/images/PHP.svg', title: 'PHP'},
+        {src: '/images/Laravel.svg', title: 'Laravel'},
     ];
 
 
