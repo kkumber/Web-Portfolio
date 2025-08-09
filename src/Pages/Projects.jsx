@@ -60,7 +60,7 @@ const Projects = () => {
     },
     {
       image: "/images/projects/verifai.webp",
-      title: "VerifAI _ AI Fact Checking Assistant",
+      title: "VerifAI - AI Fact Checking Assistant",
       description: "VerifAI is a browser extension that uses AI to detect and verify potentially false information online. It promotes responsible information sharing by providing credible sources, supporting SDG 11 (Sustainable Cities and Communities) and SDG 16 (Peace, Justice, and Strong Institutions). It is our team's hackaton entry for Sparkfest 2025 hosted by Google Developer Groups PUP.",
       tech: [
         "HTML",

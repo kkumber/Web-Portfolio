@@ -31,7 +31,7 @@ const ProjectContainer = ({data}) => {
             {/* Notes */}
             {data.note && (
                 <div className="mb-4">
-                <b><span>Notes:</span></b>
+                <b><span>Note:</span></b>
                 <p>{data.note}</p>
                 </div>
             )}
