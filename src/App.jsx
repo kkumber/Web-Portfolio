@@ -3,22 +3,23 @@ import Projects from './Pages/Projects'
 import Contact from './Pages/Contact'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './Components/Navbar'
+import GlobalBackground from './Components/GlobalBackground'
 
 
 function App() {
 
   return (
-    <div className="mx-2 md:mx-4 xl:mx-40">
-      <BrowserRouter>
+    <BrowserRouter>
+      <GlobalBackground />
       <Navbar />
+      <div className="relative z-10 mx-2 md:mx-4 xl:mx-40">
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-      </BrowserRouter>
-    </div>
-
+      </div>
+    </BrowserRouter>
   )
 }
 
