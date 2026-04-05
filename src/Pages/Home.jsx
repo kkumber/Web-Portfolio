@@ -12,7 +12,7 @@ const Home = () => {
         {/* --- BENTO GRID START --- */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(180px,auto)]">
           
-          {/* HERO & PROFILE (Giant Split Tile) */}
+          {/* HERO & PROFILE */}
           <div 
             className="md:col-span-12 lg:col-span-9 lg:row-span-2 glass-card rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row relative group border-white/10 animate-block-drop"
             style={{ animationDelay: '0.1s' }}
@@ -24,7 +24,7 @@ const Home = () => {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-orange"></span>
                   </span>
-                  Continuous Evolution
+                  Continuous Learning
                 </div>
                 <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold text-white tracking-tighter leading-[1.1]">
                   Full-Stack <br />
@@ -45,7 +45,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="md:w-1/3 lg:w-[40%] h-80 md:h-auto relative overflow-hidden">
+            <div className="md:w-1/3 lg:w-[40%] h-80 md:h-auto relative overflow-hidden max-md:order-first">
               <img src="/images/formal_picture.webp" alt="Angel Reyes" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
               <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-zinc-950/80 via-transparent to-transparent"></div>
             </div>
@@ -77,9 +77,9 @@ const Home = () => {
             className="md:col-span-12 lg:col-span-8 glass-card rounded-[2.5rem] p-8 md:p-10 relative overflow-hidden group border-white/10 animate-block-drop"
             style={{ animationDelay: '0.2s' }}
           >
-             <div className="flex justify-between items-center mb-8">
-                <h2 className="text-2xl font-bold text-white tracking-tight">Technical Arsenal</h2>
-                <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase text-zinc-500 tracking-widest">
+             <div className="flex justify-between items-center mb-8 max-md:grid gap-y-4">
+                <h2 className="text-2xl font-bold text-white tracking-tight">Core Technologies</h2>
+                <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase text-zinc-500 tracking-widest max-w-max">
                   Modern Stack
                 </div>
              </div>

@@ -6,7 +6,7 @@ const GlobalBackground = () => {
       {/* Mesh Gradient Base */}
       <div className="absolute inset-0 bg-[#050505]" />
       
-      {/* Animated Blobs - Warmer and slightly more visible */}
+      {/* Animated Blobs */}
       <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-brand-orange/[0.05] blur-[120px] animate-blob" />
       <div className="absolute top-[20%] right-[-5%] w-[50%] h-[50%] rounded-full bg-brand-purple/[0.04] blur-[100px] animate-blob animation-delay-2000" />
       <div className="absolute bottom-[-10%] left-[20%] w-[55%] h-[55%] rounded-full bg-brand-orange/[0.03] blur-[130px] animate-blob animation-delay-4000" />

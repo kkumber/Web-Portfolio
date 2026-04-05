@@ -56,10 +56,10 @@ const Projects = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-24 relative z-10 space-y-16 md:space-y-32">
         
-        {/* Header: High-Impact Gallery Title */}
+        {/* Header Title */}
         <div className="space-y-6 md:space-y-8 animate-fadeUp text-center lg:text-left">
            <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-black border border-white/5 text-[10px] font-bold tracking-[0.3em] text-white uppercase">
-               Technical Portfolio
+               My Works
            </div>
            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white tracking-tighter leading-none">
              Selected <br className="hidden sm:block" />
@@ -70,7 +70,7 @@ const Projects = () => {
            </p>
         </div>
 
-        {/* Immersive Projects Grid */}
+        {/* Projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 animate-fadeUp">
           {projects.map((data, index) => (
             <div key={index} className={`opacity-0 animate-fadeUp h-full`} style={{ animationDelay: `${index * 150}ms` }}>
