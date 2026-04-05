@@ -1,37 +1,39 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faHouse, faFolder, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import { faHouse, faFolder, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="md:sticky fixed z-10 top-0">
-        <div className="grid z-10 md:grid-cols-3 text-white">
-            <div className={`min-w-max md:col-start-2 md:col-end-2 items-center justify-evenly flex flex-col bg-backgroundLinearLightGray py-2 rounded-xl mt-4 mb-4 md:mt-8 md:mb-8 md:w-full ${isOpen ? 'w-32' : 'w-12'} transition-all duration-500`}>
-              <div className="">
-                <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-                  <FontAwesomeIcon icon={faBars} />
-                </button>
-              </div>
-              <div className={`md:flex ${isOpen ? 'block animate-fadeDown' : 'hidden'}`}>
-                <Link to={'/'} className="px-4 py-1 hover:text-black rounded-sm flex items-center gap-x-1 text-start">
-                  <FontAwesomeIcon icon={faHouse} />
-                  <p>Home</p>
-                </Link>
-                <Link to={'/projects'} className="px-4 py-1 hover:text-black rounded-sm flex items-center gap-x-1">
-                  <FontAwesomeIcon icon={faFolder} />
-                  <p>Projects</p>
-                </Link>
-                <Link to={'/contact'} className="px-4 py-1 hover:text-black rounded-sm flex items-center gap-x-1">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <p>Contact</p>
-                </Link>
-              </div>
-            </div>
+    <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-max pointer-events-auto">
+      <div className="flex items-center justify-center bg-black/60 backdrop-blur-2xl border border-white/5 p-2 px-6 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-all duration-500">
+        <div className="flex items-center gap-x-8">
+          <Link 
+            to="/" 
+            className={`transition-all duration-300 p-3 rounded-2xl hover:bg-white/5 transform hover:scale-110 active:scale-95 ${isActive('/') ? 'text-white bg-white/10' : 'text-zinc-600 hover:text-white'}`}
+            title="Home"
+          >
+            <FontAwesomeIcon icon={faHouse} className="text-xl" />
+          </Link>
+          <Link 
+            to="/projects" 
+            className={`transition-all duration-300 p-3 rounded-2xl hover:bg-white/5 transform hover:scale-110 active:scale-95 ${isActive('/projects') ? 'text-white bg-white/10' : 'text-zinc-600 hover:text-white'}`}
+            title="Projects"
+          >
+            <FontAwesomeIcon icon={faFolder} className="text-xl" />
+          </Link>
+          <Link 
+            to="/contact" 
+            className={`transition-all duration-300 p-3 rounded-2xl hover:bg-white/5 transform hover:scale-110 active:scale-95 ${isActive('/contact') ? 'text-white bg-white/10' : 'text-zinc-600 hover:text-white'}`}
+            title="Contact"
+          >
+            <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
+          </Link>
         </div>
+      </div>
     </nav>
   );
 };

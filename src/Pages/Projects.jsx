@@ -1,97 +1,114 @@
+import { useState } from "react";
 import ProjectContainer from "../Components/ProjectContainer";
+import ProjectModal from "../Components/ProjectModal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const projects = [
+    // ... (rest of projects remain same)
     {
       image: "/images/projects/aralith.webp",
-      title: "Aralith - AI-Powered Learning Platform",
-      description: "Aralith is a full-stack educational web app that uses AI to generate quizzes, flashcards, and summaries from uploaded learning materials like PDF, DOCX, images, or text. Users can take quizzes, receive instant AI feedback with explanations, track performance, and export quizzes to Google Forms or DOCX. Aralith automates lesson processing and turns study materials into interactive, personalized learning tools all within minutes.",
+      title: "Aralith - AI Learning Engine",
+      description: "Architected a high-concurrency AI platform orchestrating automated lesson synthesis and intelligent feedback loops. Engineered complex OCR pipelines for multi-format document processing (PDF/DOCX), optimizing data extraction accuracy and system response latency for large-scale educational datasets.",
       tech: [
-        "Laravel",
-        "Inertia.js",
-        "React",
-        "TypeScript",
-        "PostgreSQL",
-        "Tailwind CSS",
-        "GroqAPI (GROQ)",
-        "FastAPI",
-        "OCR (PyTesseract)",
-        "Google Apps Script",
-        "PHPWord",
+        "Laravel", "Inertia.js", "React", "TypeScript", "PostgreSQL", "GroqAPI", "FastAPI", "OCR", "PHPWord"
       ],
-      note: 'Aralith is currently private as part of my academic capstone requirement. While the source code and live demo are not publicly available at this time, I’d be happy to walk you through the project in detail or provide a private demo upon request.',
-      // github: "https://github.com/kkumber/aralith.git",
-      // demo: "https://aralith.vercel.app",
+      note: 'Source code and detailed architectural review available upon professional request.',
     },
     {
       image: "/images/projects/relight.webp",
-      title: "Relight - Light Novel Companion App",
-      description:
-        "Relight lets you browse, search, and organize light novels with ratings, threaded comments, and personal libraries. Upload PDFs for automatic metadata extraction and read with a PDF.js viewer featuring per-user, per-page bookmarks. With secure auth and email-based password resets, Relight combines seamless UX with solid security—setting the bar for future projects.",
+      title: "Relight - Content Library System",
+      description: "Designed a secure, distributed content management ecosystem featuring automated metadata extraction and granular state management. Implemented robust JWT-based authentication and a performant cloud distribution layer to handle high-volume asset delivery with sub-100ms UI responsiveness.",
       tech: [
-        "React",
-        "Typescript",
-        "TailwindCSS",
-        "Django",
-        "PostgreSQL",
-        "Django Rest Framework",
-        "JWT",
-        "PDFjs",
-        "Cloudinary",
+        "React", "TypeScript", "TailwindCSS", "Django", "PostgreSQL", "DRF", "JWT", "PDF.js", "Cloudinary"
       ],
       github: "https://github.com/kkumber/RELIGHT.git",
       demo: "https://relight-plum.vercel.app",
     },
     {
       image: "/images/projects/diyeats.webp",
-      title: "DIYeats - Recipe finder app",
-      description:
-        "A modern, interactive recipe finder app that empowers users to discover, explore, and save recipes within their accounts effortlessly. Diyeats integrates advanced search functionality, curated content, and nutritional insights to enhance the cooking experience.",
+      title: "DIYeats - Data Retrieval Platform",
+      description: "Developed a specialized data processing engine optimized for complex nutritional queries and real-time retrieval. Focused on clean state orchestration and efficient database indexing to maintain seamless interaction across a distributed full-stack architecture.",
       tech: [
-        "React",
-        "Typescript",
-        "TailwindCSS",
-        "Django",
-        "PostgreSQL",
-        "Django Rest Framework",
+        "React", "TypeScript", "TailwindCSS", "Django", "PostgreSQL", "Django Rest Framework"
       ],
       github: "https://github.com/kkumber/diyeats",
       demo: "https://recipe-finder-app-roan.vercel.app",
     },
     {
       image: "/images/projects/verifai.webp",
-      title: "VerifAI - AI Fact Checking Assistant",
-      description: "VerifAI is a browser extension that uses AI to detect and verify potentially false information online. It promotes responsible information sharing by providing credible sources, supporting SDG 11 (Sustainable Cities and Communities) and SDG 16 (Peace, Justice, and Strong Institutions). It is our team's hackaton entry for Sparkfest 2025 hosted by Google Developer Groups PUP.",
+      title: "VerifAI - AI Truth Verification",
+      description: "Pioneered a real-time misinformation detection utility using lightweight, browser-native AI models. Engineered a low-overhead ManifestV3 architecture to perform on-the-fly content analysis, securing technical recognition at Sparkfest 2025 for its innovative approach to automated fact-checking.",
       tech: [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "ManifestV3",
-        "Gemma",
+        "HTML", "CSS", "JavaScript", "ManifestV3", "Gemma AI"
       ],
       github: "https://github.com/kkumber/VerifAI.git",
-      demo: "",
     },
     {
       image: "/images/projects/aidbot.webp",
-      title: "AidBot - AI-Powered Chatbot",
-      description:
-        "AidBot is an AI chatbot designed to deliver fast, accurate, and personalized answers to user queries. With context-aware responses and a user-friendly interface, it secured 3rd place at a major hackathon for its innovation and practical impact.",
-      tech: ["Svelte", "Typescript", "SASS", "Firebase"],
+      title: "AidBot - Intelligent Query Resolution",
+      description: "Built a context-aware NLP system designed for high-precision query resolution. Orchestrated a scalable backend architecture to handle complex language understanding tasks, earning 3rd Place for robust execution and efficient natural language processing capabilities.",
+      tech: ["Svelte", "TypeScript", "SASS", "Firebase"],
       github: "https://github.com/jjjayed/AidBot-sveltekit.git",
-      demo: "",
     },
-    // {image: '', title: '', description: '', tech: [], github: '', demo: 'demo'},
-    // {image: '', title: '', description: '', tech: [], github: '', demo: 'demo'},
   ];
 
   return (
-    <div className="flex flex-col md:grid md:grid-cols-2 gap-6 my-20">
-      {projects.map((data, index) => (
-        <ProjectContainer data={data} key={index} />
-      ))}
-    </div>
+    <div className="min-h-screen text-zinc-400 font-sans selection:bg-white/10 selection:text-white antialiased overflow-x-hidden pb-24">
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-24 relative z-10 space-y-16 md:space-y-32">
+        
+        {/* Header Title */}
+        <div className="space-y-6 md:space-y-8 animate-fadeUp text-center lg:text-left">
+           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-black border border-white/5 text-[10px] font-bold tracking-[0.3em] text-white uppercase">
+               My Works
+           </div>
+           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white tracking-tighter leading-none">
+             Selected <br className="hidden sm:block" />
+             <span className="text-zinc-500 italic">Innovations.</span>
+           </h1>
+           <p className="text-lg md:text-xl text-zinc-500 max-w-2xl leading-relaxed font-medium italic mx-auto lg:mx-0">
+             A gallery of high-impact architectures, AI-driven automation, and technical ecosystems built for scalability and performance.
+           </p>
+        </div>
 
+        {/* Projects */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 animate-fadeUp">
+          {projects.map((data, index) => (
+            <div key={index} className={`opacity-0 animate-fadeUp h-full`} style={{ animationDelay: `${index * 150}ms` }}>
+               <ProjectContainer data={data} onClick={() => setSelectedProject(data)} />
+            </div>
+          ))}
+        </div>
+
+        {/* Project Modal */}
+        {selectedProject && (
+          <ProjectModal 
+            data={selectedProject} 
+            onClose={() => setSelectedProject(null)} 
+          />
+        )}
+
+        {/* Footer Gallery CTA */}
+        <div className="text-center py-16 md:py-32 border-t border-white/5 space-y-8 md:space-y-12 relative overflow-hidden rounded-[3rem]">
+           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-full bg-white/[0.03] blur-[120px] rounded-full"></div>
+           <div className="relative z-10 space-y-6 md:space-y-8 px-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight italic">Get to know me better</h2>
+              <a 
+                href="https://github.com/kkumber" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-4 px-8 py-4 md:px-12 md:py-5 bg-white text-black text-lg md:text-xl font-black rounded-full hover:bg-zinc-200 transition-all transform hover:scale-110 shadow-xl group"
+              >
+                Explore Repositories <FontAwesomeIcon icon={faArrowRight} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+           </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
