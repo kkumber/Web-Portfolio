@@ -2,9 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
-const ProjectContainer = ({ data }) => {
+const ProjectContainer = ({ data, onClick }) => {
   return (
-    <div className="group relative glass-card rounded-3xl overflow-hidden glass-card-hover flex flex-col h-full border-white/10 hover:border-brand-orange/30">
+    <div 
+      onClick={onClick}
+      className="group relative glass-card rounded-3xl overflow-hidden glass-card-hover flex flex-col h-full border-white/10 hover:border-brand-orange/30 cursor-pointer transition-all duration-500 hover:scale-[1.02]"
+    >
       
       {/* Immersive Image Display */}
       <div className="relative aspect-[16/10] overflow-hidden border-b border-white/5">
@@ -48,6 +51,7 @@ const ProjectContainer = ({ data }) => {
               href={data.github} 
               target="_blank" 
               rel="noopener noreferrer" 
+              onClick={(e) => e.stopPropagation()}
               className="flex items-center gap-2 text-xs font-bold text-zinc-400 hover:text-white transition-all transform hover:-translate-y-1"
             >
               <FontAwesomeIcon icon={faGithub} className="text-lg" /> SOURCE
@@ -58,6 +62,7 @@ const ProjectContainer = ({ data }) => {
               href={data.demo} 
               target="_blank" 
               rel="noopener noreferrer" 
+              onClick={(e) => e.stopPropagation()}
               className="flex items-center gap-2 text-xs font-bold text-brand-orange hover:text-white transition-all transform hover:-translate-y-1"
             >
               <FontAwesomeIcon icon={faExternalLinkAlt} className="text-lg" /> DEPLOYMENT

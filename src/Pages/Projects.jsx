@@ -1,9 +1,14 @@
+import { useState } from "react";
 import ProjectContainer from "../Components/ProjectContainer";
+import ProjectModal from "../Components/ProjectModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const projects = [
+    // ... (rest of projects remain same)
     {
       image: "/images/projects/aralith.webp",
       title: "Aralith - AI Learning Engine",
@@ -74,16 +79,24 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 animate-fadeUp">
           {projects.map((data, index) => (
             <div key={index} className={`opacity-0 animate-fadeUp h-full`} style={{ animationDelay: `${index * 150}ms` }}>
-               <ProjectContainer data={data} />
+               <ProjectContainer data={data} onClick={() => setSelectedProject(data)} />
             </div>
           ))}
         </div>
+
+        {/* Project Modal */}
+        {selectedProject && (
+          <ProjectModal 
+            data={selectedProject} 
+            onClose={() => setSelectedProject(null)} 
+          />
+        )}
 
         {/* Footer Gallery CTA */}
         <div className="text-center py-16 md:py-32 border-t border-white/5 space-y-8 md:space-y-12 relative overflow-hidden rounded-[3rem]">
            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-full bg-white/[0.03] blur-[120px] rounded-full"></div>
            <div className="relative z-10 space-y-6 md:space-y-8 px-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight italic">Ready for a deeper technical dive?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight italic">Get to know me better</h2>
               <a 
                 href="https://github.com/kkumber" 
                 target="_blank" 
