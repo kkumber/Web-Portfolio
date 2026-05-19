@@ -20,11 +20,11 @@ const TechnologyContainer = ({ isBento }) => {
 
 
     const content = (
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-8 gap-4 md:gap-6">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-4 md:gap-6">
             {images.map((image, index) => 
             <div className="group flex flex-col items-center justify-center p-3 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all duration-300" key={index}>
                 <img src={image.src} alt={image.title} className="w-8 h-8 md:w-10 md:h-10 object-contain mb-2 group-hover:scale-110 transition-transform duration-300"/>
-                <p className="text-[10px] text-zinc-500 font-medium uppercase tracking-tighter text-center group-hover:text-white transition-colors">{image.title}</p>
+                <p className="text-[10px] text-white font-medium uppercase tracking-tighter text-center">{image.title}</p>
             </div>
             )}
         </div>
