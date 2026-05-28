@@ -8,20 +8,28 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
-    // ... (rest of projects remain same)
+    {
+      image: "/images/projects/docusphere.webp",
+      title: "DocuSphere - Enterprise Document Ecosystem",
+      description: "A high-integrity, decoupled digital repository built for the Department of Education (DepEd) Makati. The system features a React 19 SPA frontend with type-safe TanStack routing and asynchronous state management via TanStack Query. The backend is a robust Laravel 12 API utilizing RBAC with Spatie, automated audit logging, and an integrated electronic signature engine powered by TCPDF and FPDI. Engineered for scalability, it handles complex document lifecycles with strict data consistency and real-time monitoring dashboards.",
+      tech: ["React", "TypeScript", "TanStack Query", "TanStack Router", "Laravel", "PostgreSQL", "TCPDF", "RBAC", "Docker"],
+      github: "https://github.com/kkumber/docusphere-fe",
+      demo: "https://docusphere-fe.vercel.app/",
+      note: "Infrastructure Note: API is containerized and hosted on Render's free tier; initial requests may experience latency during container spin-up.",
+    },
     {
       image: "/images/projects/aralith.webp",
-      title: "Aralith - AI Learning Engine",
-      description: "Architected a high-concurrency AI platform orchestrating automated lesson synthesis and intelligent feedback loops. Engineered complex OCR pipelines for multi-format document processing (PDF/DOCX), optimizing data extraction accuracy and system response latency for large-scale educational datasets.",
+      title: "Aralith - AI Learning Orchestrator",
+      description: "An advanced educational platform orchestrating automated lesson synthesis through multi-modal AI pipelines. The architecture integrates high-accuracy OCR for document ingestion and large language models (LLMs) via GroqAPI for intelligent content distillation. Built on an Inertia.js and Laravel stack with React, it features a distributed processing layer that optimizes response latency for large-scale educational datasets, transforming unstructured documents into interactive, bite-sized learning modules.",
       tech: [
         "Laravel", "Inertia.js", "React", "TypeScript", "PostgreSQL", "GroqAPI", "FastAPI", "OCR", "PHPWord"
       ],
-      note: 'Source code and detailed architectural review available upon professional request.',
+      note: "Architecture Review: Technical deep-dive and source review available upon request.",
     },
     {
       image: "/images/projects/relight.webp",
-      title: "Relight - Content Library System",
-      description: "Designed a secure, distributed content management ecosystem featuring automated metadata extraction and granular state management. Implemented robust JWT-based authentication and a performant cloud distribution layer to handle high-volume asset delivery with sub-100ms UI responsiveness.",
+      title: "Relight - Distributed Library System",
+      description: "A secure, cloud-native content management ecosystem designed for high-volume asset delivery. The system implements a robust JWT-based authentication layer and granular state management to achieve sub-100ms UI responsiveness. It features an automated metadata extraction engine and a performant asset distribution layer integrated with Cloudinary, ensuring seamless synchronization across a distributed full-stack architecture powered by Django and React.",
       tech: [
         "React", "TypeScript", "TailwindCSS", "Django", "PostgreSQL", "DRF", "JWT", "PDF.js", "Cloudinary"
       ],
@@ -30,8 +38,8 @@ const Projects = () => {
     },
     {
       image: "/images/projects/diyeats.webp",
-      title: "DIYeats - Data Retrieval Platform",
-      description: "Developed a specialized data processing engine optimized for complex nutritional queries and real-time retrieval. Focused on clean state orchestration and efficient database indexing to maintain seamless interaction across a distributed full-stack architecture.",
+      title: "DIYeats - Real-Time Data Engine",
+      description: "A specialized data processing platform optimized for complex nutritional queries and low-latency retrieval. The core engine utilizes advanced database indexing and efficient state orchestration to maintain performance across high-concurrency request patterns. Featuring a clean RESTful API design with Django Rest Framework and a responsive React frontend, the system handles multi-format data distillation for rapid informational access.",
       tech: [
         "React", "TypeScript", "TailwindCSS", "Django", "PostgreSQL", "Django Rest Framework"
       ],
@@ -40,8 +48,8 @@ const Projects = () => {
     },
     {
       image: "/images/projects/verifai.webp",
-      title: "VerifAI - AI Truth Verification",
-      description: "Pioneered a real-time misinformation detection utility using lightweight, browser-native AI models. Engineered a low-overhead ManifestV3 architecture to perform on-the-fly content analysis, securing technical recognition at Sparkfest 2025 for its innovative approach to automated fact-checking.",
+      title: "VerifAI - Browser-Native AI Utility",
+      description: "A privacy-first content verification tool leveraging local LLM execution within a browser-native environment. Engineered with a lightweight ManifestV3 architecture, the system performs real-time content analysis using Google's Gemma AI without server-side compute. This project secured technical recognition at Sparkfest 2025 for its innovative approach to decentralized, zero-latency truth verification and privacy-centric AI integration.",
       tech: [
         "HTML", "CSS", "JavaScript", "ManifestV3", "Gemma AI"
       ],
@@ -49,34 +57,34 @@ const Projects = () => {
     },
     {
       image: "/images/projects/aidbot.webp",
-      title: "AidBot - Intelligent Query Resolution",
-      description: "Built a context-aware NLP system designed for high-precision query resolution. Orchestrated a scalable backend architecture to handle complex language understanding tasks, earning 3rd Place for robust execution and efficient natural language processing capabilities.",
+      title: "AidBot - Context-Aware NLP Engine",
+      description: "A high-precision query resolution system designed for real-time natural language interaction. Built with Svelte and Firebase, the architecture features a reactive data layer for instant message synchronization and a context-aware NLP processing engine. Recognized with a 3rd Place award for its robust execution, the system efficiently handles complex language understanding tasks while maintaining a highly responsive, human-centric interface.",
       tech: ["Svelte", "TypeScript", "SASS", "Firebase"],
       github: "https://github.com/jjjayed/AidBot-sveltekit.git",
     },
   ];
 
   return (
-    <div className="min-h-screen text-zinc-400 font-sans selection:bg-white/10 selection:text-white antialiased overflow-x-hidden pb-24">
+    <div className="min-h-screen text-slate-600 font-sans selection:bg-indigo-100 selection:text-indigo-900 antialiased overflow-x-hidden pb-24">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-24 relative z-10 space-y-16 md:space-y-32">
         
         {/* Header Title */}
         <div className="space-y-6 md:space-y-8 animate-fadeUp text-center lg:text-left">
-           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-black border border-white/5 text-[10px] font-bold tracking-[0.3em] text-white uppercase">
-               My Works
+           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-[10px] font-bold tracking-[0.3em] text-indigo-600 uppercase">
+              My Works              
            </div>
-           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white tracking-tighter leading-none">
-             Selected <br className="hidden sm:block" />
-             <span className="text-zinc-500 italic">Innovations.</span>
+           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-slate-900 tracking-tighter leading-none">
+             Systems 
+             <span className="text-slate-400 italic"> Built.</span>
            </h1>
-           <p className="text-lg md:text-xl text-zinc-500 max-w-2xl leading-relaxed font-medium italic mx-auto lg:mx-0">
-             A gallery of high-impact architectures, AI-driven automation, and technical ecosystems built for scalability and performance.
+           <p className="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic mx-auto lg:mx-0">
+             A showcase of my projects, focusing on scalable architectures, AI-driven pipelines, and distributed digital ecosystems.
            </p>
         </div>
 
         {/* Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 animate-fadeUp">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 animate-fadeUp relative z-20">
           {projects.map((data, index) => (
             <div key={index} className={`opacity-0 animate-fadeUp h-full`} style={{ animationDelay: `${index * 150}ms` }}>
                <ProjectContainer data={data} onClick={() => setSelectedProject(data)} />
@@ -93,17 +101,17 @@ const Projects = () => {
         )}
 
         {/* Footer Gallery CTA */}
-        <div className="text-center py-16 md:py-32 border-t border-white/5 space-y-8 md:space-y-12 relative overflow-hidden rounded-[3rem]">
-           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-full bg-white/[0.03] blur-[120px] rounded-full"></div>
+        <div className="text-center py-16 md:py-32 border-t border-slate-100 space-y-8 md:space-y-12 relative overflow-hidden rounded-[3rem] bg-slate-50">
+           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-full bg-indigo-500/[0.03] blur-[120px] rounded-full"></div>
            <div className="relative z-10 space-y-6 md:space-y-8 px-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight italic">Get to know me better</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight italic">Deep Dive into Architecture</h2>
               <a 
                 href="https://github.com/kkumber" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center gap-4 px-8 py-4 md:px-12 md:py-5 bg-white text-black text-lg md:text-xl font-black rounded-full hover:bg-zinc-200 transition-all transform hover:scale-110 shadow-xl group"
+                className="inline-flex items-center gap-4 px-8 py-4 md:px-12 md:py-5 bg-indigo-600 text-white text-lg md:text-xl font-black rounded-full hover:bg-indigo-700 transition-all transform hover:scale-110 shadow-xl group"
               >
-                Explore Repositories <FontAwesomeIcon icon={faArrowRight} className="group-hover:translate-x-1 transition-transform" />
+                Inspect Repositories <FontAwesomeIcon icon={faArrowRight} className="group-hover:translate-x-1 transition-transform" />
               </a>
            </div>
         </div>

@@ -8,24 +8,24 @@ export default {
     extend: {
       colors: {
         zinc: {
-          950: '#050505', // Lifted from pure black
-          900: '#0c0c0c',
-          800: '#1a1a1a',
-          700: '#2a2a2a',
-          400: '#a1a1aa',
-          300: '#d4d4d8',
+          950: '#f8fafc', // Slate-50 (Light background)
+          900: '#f1f5f9', // Slate-100
+          800: '#e2e8f0', // Slate-200
+          700: '#cbd5e1',
+          400: '#64748b', // Slate-500 (Text secondary)
+          300: '#475569', // Slate-600 (Text primary)
         },
         brand: {
-          primary: '#ffffff',
-          secondary: '#a1a1aa',
-          accent: '#f97316', // Orange
-          orange: '#f97316',
-          purple: '#a855f7',
-          glow: 'rgba(249, 115, 22, 0.1)',
+          primary: '#0f172a', // Deep Slate text
+          secondary: '#64748b',
+          accent: '#4f46e5', // Indigo-600
+          indigo: '#4f46e5',
+          sky: '#0ea5e9',
+          glow: 'rgba(79, 70, 229, 0.05)',
         }
       },
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
