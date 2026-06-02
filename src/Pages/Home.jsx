@@ -78,7 +78,7 @@ const Home = () => {
             style={{ animationDelay: '0.2s' }}
           >
              <div className="flex justify-between items-center mb-8 max-md:grid gap-y-4">
-                <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Engineering Stack</h2>
+                <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Tech Stack</h2>
                 <div className="px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-[10px] font-bold uppercase text-slate-500 tracking-widest max-w-max">
                   Core Technologies
                 </div>

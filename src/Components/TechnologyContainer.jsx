@@ -16,6 +16,7 @@ const TechnologyContainer = ({ isBento }) => {
         {src: '/images/TypeScript.svg', title: 'TS'},
         {src: '/images/PHP.svg', title: 'PHP'},
         {src: '/images/Laravel.svg', title: 'Laravel'},
+        {src: '/images/Docker.svg', title: 'Docker'},
     ];
 
 

@@ -11,8 +11,8 @@ const Projects = () => {
     {
       image: "/images/projects/docusphere.webp",
       title: "DocuSphere - Enterprise Document Ecosystem",
-      description: "A high-integrity, decoupled digital repository built for the Department of Education (DepEd) Makati. The system features a React 19 SPA frontend with type-safe TanStack routing and asynchronous state management via TanStack Query. The backend is a robust Laravel 12 API utilizing RBAC with Spatie, automated audit logging, and an integrated electronic signature engine powered by TCPDF and FPDI. Engineered for scalability, it handles complex document lifecycles with strict data consistency and real-time monitoring dashboards.",
-      tech: ["React", "TypeScript", "TanStack Query", "TanStack Router", "Laravel", "PostgreSQL", "TCPDF", "RBAC", "Docker"],
+      description: "A high-integrity, decoupled digital repository built for the Department of Education (DepEd) Makati. The system features a React SPA frontend with type-safe TanStack routing and asynchronous state management via TanStack Query. The backend is a robust Laravel 12 API utilizing RBAC with Spatie, automated audit logging, and an integrated electronic signature engine powered by TCPDF and FPDI. Engineered for scalability, it handles complex document lifecycles with strict data consistency and real-time monitoring dashboards.",
+      tech: ["React", "TypeScript", "TanStack Query", "TanStack Router", "Laravel", "PostgreSQL", "TCPDF", "RBAC", "Cloudinary", "Docker"],
       github: "https://github.com/kkumber/docusphere-fe",
       demo: "https://docusphere-fe.vercel.app/",
       note: "Infrastructure Note: API is containerized and hosted on Render's free tier; initial requests may experience latency during container spin-up.",
@@ -24,7 +24,9 @@ const Projects = () => {
       tech: [
         "Laravel", "Inertia.js", "React", "TypeScript", "PostgreSQL", "GroqAPI", "FastAPI", "OCR", "PHPWord"
       ],
-      note: "Architecture Review: Technical deep-dive and source review available upon request.",
+      github: "https://github.com/kkumber/aralith.git",
+      demo: "https://aralith-prod.onrender.com", 
+      note: "Infrastructure Note: API is containerized and hosted on Render's free tier; initial requests may experience latency during container spin-up.",
     },
     {
       image: "/images/projects/relight.webp",
@@ -84,7 +86,7 @@ const Projects = () => {
         </div>
 
         {/* Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 animate-fadeUp relative z-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 animate-fadeUp relative z-20">
           {projects.map((data, index) => (
             <div key={index} className={`opacity-0 animate-fadeUp h-full`} style={{ animationDelay: `${index * 150}ms` }}>
                <ProjectContainer data={data} onClick={() => setSelectedProject(data)} />
