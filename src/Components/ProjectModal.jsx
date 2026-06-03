@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -13,6 +13,14 @@ const ProjectModal = ({ data, onClose }) => {
   }, []);
 
   if (!data) return null;
+
+  // Title split logic: Handle both ' - ' (short dash) and ' — ' (em dash)
+  const titleParts = data.title.includes(" — ") 
+    ? data.title.split(" — ") 
+    : data.title.split(" - ");
+  
+  const mainTitle = titleParts[0];
+  const subTitle = titleParts[1];
 
   const modalContent = (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-8 animate-fadeIn backdrop-blur-2xl">
@@ -47,11 +55,11 @@ const ProjectModal = ({ data, onClose }) => {
             {/* Clean Header */}
             <div className="space-y-2">
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
-                {data.title.split(' - ')[0]}
+                {mainTitle}
               </h2>
-              {data.title.split(' - ')[1] && (
+              {subTitle && (
                 <p className="text-sm font-medium text-indigo-600 uppercase tracking-widest">
-                  {data.title.split(' - ')[1]}
+                  {subTitle}
                 </p>
               )}
             </div>
@@ -60,6 +68,21 @@ const ProjectModal = ({ data, onClose }) => {
             <p className="text-slate-600 leading-relaxed">
               {data.description}
             </p>
+
+            {/* Professional Features List */}
+            {data.features && (
+              <div className="space-y-4">
+                <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Key Technical Features</h3>
+                <ul className="space-y-3">
+                  {data.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3 text-slate-600 text-sm leading-snug">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {/* Essential Tech Chips */}
             <div className="space-y-4">
