@@ -127,6 +127,7 @@ const Projects = () => {
       tech: ["React", "TypeScript", "Django", "Django REST Framework", "PostgreSQL", "Spoonacular API"],
       github: "https://github.com/kkumber/diyeats",
       demo: "https://recipe-finder-app-roan.vercel.app",
+      note: "Backend functionality is temporarily unavailable while new features and improvements are being implemented",
       scale: "big",
     },
     {
