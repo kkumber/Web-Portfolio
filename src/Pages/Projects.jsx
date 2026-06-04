@@ -94,7 +94,7 @@ const Projects = () => {
       tech: ["Laravel", "Inertia.js", "React", "FastAPI", "Groq API", "Tesseract OCR", "PostgreSQL"],
       github: "https://github.com/kkumber/aralith.git",
       demo: "https://aralith-prod.onrender.com",
-      note: "Infrastructure Note: Backend services are hosted on Render's free tier and may require a short cold-start period and AI token rate limits.",
+      note: "Infrastructure Note: Backend services are hosted on Render's free tier and may require a short cold-start period. Groq API is on a free trial plan, so response times may vary based on usage limits.",
       scale: "big",
     },
     {
