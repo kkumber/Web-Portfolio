@@ -101,7 +101,7 @@ const Projects = () => {
       image: "/images/projects/relight.webp",
       title: "Relight — Digital Library Manager",
       description:
-        "A web application for organizing and viewing digital resources like books and documents. I developed the backend using Django REST Framework with JWT for secure user sessions. To improve the reading experience, I integrated PDF.js so users can view documents directly in the browser. I also used Cloudinary to manage and deliver uploaded assets efficiently across the platform.",
+        "A web application for organizing and viewing digital light novels. I developed the backend using Django REST Framework with JWT for secure user sessions. To improve the reading experience, I integrated PDF.js so users can view documents directly in the browser. I also used Cloudinary to manage and deliver uploaded assets efficiently across the platform.",
       features: [
         "Developed a secure REST API with Django and JWT authentication for user resources.",
         "Integrated PDF.js to provide a native document viewing experience in the browser.",
