@@ -71,9 +71,17 @@ const Projects = () => {
       features: [
         "Designed a state-machine workflow engine that enforces valid document transitions across 5+ departments.",
         "Integrated TCPDF and FPDI for server-side PDF generation, modification, and digital signature overlay.",
-        "Implemented granular role-based access control with Spatie Permissions to govern every workflow action.",
+        "Integrated granular role-based access control with Spatie Permissions to govern every workflow action.",
         "Built a full audit trail and real-time notification system for end-to-end document traceability.",
       ],
+      demoAccounts: [
+        "Admin: docusphere@admin.com",
+        "Records: docusphere@records.com",
+        "SDS: docusphere@sds.com",
+        "Chief: docusphere@chief.com",
+        "Staff: docusphere@staff.com",
+      ],
+      demoPassword: "password",
       tech: ["React", "TypeScript", "TanStack (Router, Query, Table)", "Laravel", "PostgreSQL", "TCPDF", "FPDI", "Spatie RBAC", "Docker"],
       github: "https://github.com/kkumber/docusphere-fe",
       demo: "https://docusphere-fe.vercel.app/",

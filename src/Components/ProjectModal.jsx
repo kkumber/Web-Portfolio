@@ -96,6 +96,28 @@ const ProjectModal = ({ data, onClose }) => {
               </div>
             </div>
 
+            {/* Demo Accounts */}
+            {data.demoAccounts && (
+              <div className="space-y-4 p-5 bg-indigo-50/50 border border-indigo-100/50 rounded-2xl">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest">Demo Access</h3>
+                  {data.demoPassword && (
+                    <span className="text-[10px] font-medium text-indigo-600 bg-indigo-100 px-2 py-0.5 rounded-md">
+                      PW: {data.demoPassword}
+                    </span>
+                  )}
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {data.demoAccounts.map((account, i) => (
+                    <div key={i} className="text-[11px] font-medium text-slate-600 flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-indigo-400"></span>
+                      {account}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               {data.demo && (
